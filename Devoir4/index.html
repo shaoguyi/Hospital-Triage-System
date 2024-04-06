@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Triage Login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Welcome to Hospital Triage System</h1>
+    <form id="doctorLoginForm" action="doctor_login.php" method="post">
+        <input type="text" name="name" id="doctor_name" placeholder="Enter your name">
+        <input type="text" name="code" id="doctor_code" placeholder="Enter your code">
+        <button type="submit">Doctor Login</button>
+    </form>
+
+    <div id="patientInfo" style="display: none;">
+        <h2>Welcome, <span id="patientName"></span>!</h2>
+        <p>Your estimated wait time is <span id="waitTime"></span> minutes.</p>
+    </div>
+
+    <form id="patientLoginForm">
+        <input type="text" name="name" id="patient_name" placeholder="Enter your name">
+        <input type="text" name="code" id="patient_code" placeholder="Enter your code">
+        <button type="submit">Patient Login</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./patients_login.js"></script>
+
+</body>
+</html>
